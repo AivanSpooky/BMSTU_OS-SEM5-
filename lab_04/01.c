@@ -119,21 +119,25 @@ void *thr_fn(void *arg)
 			syslog(LOG_ERR, "sigwait");
 			exit(1);
 		}
-		if (signo == SIGHUP)
+		switch(signo)
 		{
-			syslog(LOG_INFO, "catch SIGHUP");
-			reread();
+			case SIGHUP:
+			{
+				syslog(LOG_INFO, "catch SIGHUP");
+				reread();
+			}
+			case SIGTERM:
+			{
+				syslog(LOG_INFO, "catch SIGTERM");
+				exit(0);
+			}
+			default:
+			{
+				syslog(LOG_INFO, "catch signal %d\n", signo);
+				break;
+			}
 		}
-		else if (signo == SIGTERM)
-		{
-			syslog(LOG_INFO, "catch SIGTERM");
-			exit(0);
-		}
-		else
-		{
-			syslog(LOG_INFO, "catch signal %d\n", signo);
-			break;
-		}
+		
 	}
 	return 0;
 }
