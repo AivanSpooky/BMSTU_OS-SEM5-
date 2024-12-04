@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "_7",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_7-Debug-e54e8fc9f2b1eb1c7b6c.json",
+					"name" : "_7",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/olegdokucaev/Desktop/\u0411\u0430\u0443\u043c\u0430\u043d\u043a\u0430/\u041e\u0421/\u041b\u0430\u0431\u0430 7/cmake-build-debug",
+		"source" : "/Users/olegdokucaev/Desktop/\u0411\u0430\u0443\u043c\u0430\u043d\u043a\u0430/\u041e\u0421/\u041b\u0430\u0431\u0430 7"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
