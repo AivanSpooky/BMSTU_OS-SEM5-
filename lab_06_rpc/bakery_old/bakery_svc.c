@@ -51,7 +51,7 @@ bakery_prog_1(struct svc_req *rqstp, register SVCXPRT *transp)
 		svcerr_systemerr (transp);
 	}
 	if (!svc_freeargs (transp, (xdrproc_t) _xdr_argument, (caddr_t) &argument)) {
-		//fprintf (stderr, "%s", "unable to free arguments");
+		fprintf (stderr, "%s", "unable to free arguments");
 		exit (1);
 	}
 	return;
@@ -66,26 +66,26 @@ main (int argc, char **argv)
 
 	transp = svcudp_create(RPC_ANYSOCK);
 	if (transp == NULL) {
-		//fprintf (stderr, "%s", "cannot create udp service.");
+		fprintf (stderr, "%s", "cannot create udp service.");
 		exit(1);
 	}
 	if (!svc_register(transp, BAKERY_PROG, BAKERY_VER, bakery_prog_1, IPPROTO_UDP)) {
-		//fprintf (stderr, "%s", "unable to register (BAKERY_PROG, BAKERY_VER, udp).");
+		fprintf (stderr, "%s", "unable to register (BAKERY_PROG, BAKERY_VER, udp).");
 		exit(1);
 	}
 
 	transp = svctcp_create(RPC_ANYSOCK, 0, 0);
 	if (transp == NULL) {
-		//fprintf (stderr, "%s", "cannot create tcp service.");
+		fprintf (stderr, "%s", "cannot create tcp service.");
 		exit(1);
 	}
 	if (!svc_register(transp, BAKERY_PROG, BAKERY_VER, bakery_prog_1, IPPROTO_TCP)) {
-		//fprintf (stderr, "%s", "unable to register (BAKERY_PROG, BAKERY_VER, tcp).");
+		fprintf (stderr, "%s", "unable to register (BAKERY_PROG, BAKERY_VER, tcp).");
 		exit(1);
 	}
 
 	svc_run ();
-	//fprintf (stderr, "%s", "svc_run returned");
+	fprintf (stderr, "%s", "svc_run returned");
 	exit (1);
 	/* NOTREACHED */
 }
