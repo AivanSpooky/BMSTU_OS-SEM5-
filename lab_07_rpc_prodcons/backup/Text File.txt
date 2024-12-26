@@ -1,0 +1,10 @@
+ 
+Mnogopoto4nii server na primere zada4i Proizvodstva Potrebleniya
+
+Skolko to4ek vhoda?
+Gde srabativaet?
+Po4emy vi sdelali otklu4ennie potoki?
+
+V demone ne delali join.
+
+
